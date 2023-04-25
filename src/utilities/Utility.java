@@ -20,7 +20,7 @@ public class Utility extends BaseTest {
     /**
      * This method is used to verify the text displayed on the page
      */
-    public void verifyText(String message, String expectedText, String actualText){
+    public void verifyText(String message, String expectedText, String actualText) {
         Assert.assertEquals(message, expectedText, actualText);
     }
 
@@ -97,18 +97,18 @@ public class Utility extends BaseTest {
 
     //*************************** Select Class Methods ***************************************//
 
-    public Actions actions(){
+    public Actions actions() {
         return new Actions(driver);
     }
 
-    public void selectByVisibleText(By by, String text){
+    public void selectByVisibleText(By by, String text) {
         WebElement dropdown = driver.findElement(by);
         Select select = new Select(dropdown);
         select.selectByVisibleText(text);
     }
 
-    public WebElement element (By by){
-       return driver.findElement(by);
+    public WebElement element(By by) {
+        return driver.findElement(by);
     }
 
 }
